@@ -1,0 +1,14 @@
+# Khai sử dụng công cụ hỗ trợ
+
+Một dòng cho một lần dùng. Khai đầy đủ không bị trừ điểm. Không khai mới bị.
+
+| Thành viên | Công cụ | Cho việc gì | Đã kiểm lại ra sao |
+|---|---|---|---|
+| Huỳnh Hoàng Nam | Deepseek | Hỗ trợ soạn khung mô hình đe dọa M1, gợi ý cấu trúc STRIDE | Đọc lại, chỉnh sửa nội dung chi tiết 6 mối đe dọa và biện pháp cấu hình |
+| Đỗ Trung Kiên |Chat gpt, github copilot  | dùng chat gpt hỗ trợ việc dựng mô hình và hệ thống   | dùng github check lại lỗi và debug |
+| Đỗ Trung Kiên | Copilot SDK trong VS Code | Hỗ trợ bổ sung kiểm thử JWT/phân quyền, xử lý lỗi khởi động dịch vụ và cập nhật tài liệu M2 | Đã xem lại thay đổi; chạy test tự động và kiểm tra cấu hình Compose |
+| Nguyễn Thị Khánh Linh | GitHub Copilot, ChatGPT | Cấu hình thời hạn/phiên token, MFA TOTP cho tài khoản admin demo; viết test JWT và script xuất realm đã lọc credential | Đã đọc lại code, chạy test local 28/28; chưa xác nhận CI GitHub và đăng nhập TOTP end-to-end |
+| Lê Quốc Đạt | Claude (Anthropic) | Review yêu cầu M3, giải thích threat model, hướng dẫn quy trình git | Đối chiếu README nhóm và yêu cầu M3; tự viết lại báo cáo theo văn phong cá nhân |
+| Đỗ Trung Kiên | Claude (Anthropic) | Chuyển cấu trúc kho theo đặc tả đề; viết `scripts/attack.py`, `scripts/make_manifest.py`, `scripts/make_charts.py`, `scripts/make_slides.py`, `tests/test_realm_config.py`, `docs/threat-model.json`, bản báo cáo `docs/report.md`/`report.pdf` và `docs/slides.pdf`; sửa `Makefile` và `scripts/export_filtered_realm.py` | Công cụ đã tự chạy: `export_filtered_realm.py` (khớp bản cũ), kiểm cú pháp, các ca `test_realm_config.py` bằng bản giả lập pytest. Thành viên cần rà soát lại thay đổi trước khi nộp. Tại thời điểm ghi nhận chưa chạy Docker, `make up/verify/attack` hoặc pytest thật |
+| Đỗ Trung Kiên | OpenAI Codex (GPT-6) | Sửa target Makefile và đường dẫn kiểm thử; chuyển test cấu hình realm vào `tests/`; ghim digest ảnh Python; cập nhật báo cáo theo kết quả `make test`, `attack-results.json` và pytest | Codex đã đọc lại diff; chạy pytest cấu hình/manifest trên máy phát triển (41 test và 3 subtest đạt). Thành viên cung cấp transcript cho thấy hai image build thành công, 22 test Resource Server + 4 test demo đạt, và xác nhận `make verify` đạt; Codex không trực tiếp truy cập Docker daemon hoặc chạy toàn bộ `make defend` |
+| Nguyễn Thị Khánh Linh | Copilot SDK trong VS Code | Đồng bộ `make verify` với bộ kiểm tấn công loopback; cập nhật báo cáo, Makefile và script kết quả; tạo lại SBOM và ký bằng khóa Cosign tự quản không tải transparency log | Chạy lại `make test` và `make verify` ngày 26/10/2026: 28 test Resource Server, 4 test demo, health checks và 18/18 ca tấn công đạt; chạy `pytest tests` (41 passed, 3 subtests passed); tái tạo manifest và xác minh chữ ký SBOM bằng khóa công khai |

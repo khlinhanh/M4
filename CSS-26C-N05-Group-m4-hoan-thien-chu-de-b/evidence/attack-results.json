@@ -1,0 +1,164 @@
+[
+  {
+    "resource_server": 1,
+    "port": 8001,
+    "path": "/api/user",
+    "case": "khong_co_token",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 1,
+    "port": 8001,
+    "path": "/api/user",
+    "case": "alg_none_dung_audience",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 1,
+    "port": 8001,
+    "path": "/api/user",
+    "case": "alg_none_sai_audience",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 1,
+    "port": 8001,
+    "path": "/api/user",
+    "case": "chu_ky_RS256_gia",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 1,
+    "port": 8001,
+    "path": "/api/user",
+    "case": "HS256_khoa_tuy_y",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 1,
+    "port": 8001,
+    "path": "/api/user",
+    "case": "token_rac",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 2,
+    "port": 8002,
+    "path": "/api/user",
+    "case": "khong_co_token",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 2,
+    "port": 8002,
+    "path": "/api/user",
+    "case": "alg_none_dung_audience",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 2,
+    "port": 8002,
+    "path": "/api/user",
+    "case": "alg_none_sai_audience",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 2,
+    "port": 8002,
+    "path": "/api/user",
+    "case": "chu_ky_RS256_gia",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 2,
+    "port": 8002,
+    "path": "/api/user",
+    "case": "HS256_khoa_tuy_y",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 2,
+    "port": 8002,
+    "path": "/api/user",
+    "case": "token_rac",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 3,
+    "port": 8003,
+    "path": "/api/user",
+    "case": "khong_co_token",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 3,
+    "port": 8003,
+    "path": "/api/user",
+    "case": "alg_none_dung_audience",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 3,
+    "port": 8003,
+    "path": "/api/user",
+    "case": "alg_none_sai_audience",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 3,
+    "port": 8003,
+    "path": "/api/user",
+    "case": "chu_ky_RS256_gia",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 3,
+    "port": 8003,
+    "path": "/api/user",
+    "case": "HS256_khoa_tuy_y",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  },
+  {
+    "resource_server": 3,
+    "port": 8003,
+    "path": "/api/user",
+    "case": "token_rac",
+    "http": 401,
+    "expected": "401|403",
+    "result": "DAT"
+  }
+]
